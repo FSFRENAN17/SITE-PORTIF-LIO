@@ -1,0 +1,224 @@
+/* Reset básico */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Letras brancas */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efeito de "códigos em volta" com fundo estilizado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #000, #1E3A8A); /* Gradiente preto para azul escuro */
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Adiciona um efeito de "código" com linhas sutis */
+body::after {
+    content: '0101 1010 0011 1100 0101 1010 0011 1100';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #1E3A8A; /* Azul escuro */
+    font-family: monospace;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    z-index: -1;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: code-scroll 20s linear infinite;
+}
+
+/* Animação para o efeito de código */
+@keyframes code-scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #1E3A8A; /* Azul escuro */
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+/* Estilo do menu de navegação */
+nav a {
+    color: #fff; /* Letras brancas */
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #00BFFF; /* Azul claro ao passar o mouse */
+}
+
+/* Estilo da seção principal (hero) */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px; /* Ajustado para não sobrepor o header */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+}
+
+/* Estilo da imagem */
+.hero img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3); /* Sombra azul clara */
+    max-width: 300px;
+    border: 2px solid #1E3A8A; /* Borda azul escura */
+}
+
+/* Estilo do texto da seção hero */
+.hero p {
+    color: #fff; /* Letras brancas */
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Estilo do botão */
+.btn {
+    background-color: #1E3A8A; /* Azul escuro */
+    color: #fff; /* Letras brancas */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid #00BFFF; /* Borda azul clara */
+}
+
+.btn:hover {
+    background-color: #00BFFF; /* Azul claro */
+    color: #000; /* Letras pretas ao passar o mouse */
+}
+
+/* Estilo da seção Sobre Mim */
+.sobre {
+    padding: 120px 20px 80px; /* Ajustado para não sobrepor o header */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+}
+
+.sobre h2 {
+    color: #00BFFF; /* Azul claro */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Estilo da seção Projetos */
+.projetos {
+    padding: 120px 20px 80px; /* Ajustado para não sobrepor o header */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+}
+
+.projetos h2 {
+    color: #00BFFF; /* Azul claro */
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.projeto-item {
+    background-color: #1E3A8A; /* Azul escuro */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3); /* Sombra azul clara */
+}
+
+.projeto-item h3 {
+    color: #fff; /* Letras brancas */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.projeto-item p {
+    color: #ddd; /* Cinza claro para contraste */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo da seção Contato */
+.contato {
+    padding: 120px 20px 80px; /* Ajustado para não sobrepor o header */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+}
+
+.contato h2 {
+    color: #00BFFF; /* Azul claro */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.contato ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato ul li {
+    margin: 10px 0;
+}
+
+.contato ul li a {
+    color: #00BFFF; /* Azul claro */
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato ul li a:hover {
+    color: #fff; /* Letras brancas ao passar o mouse */
+}
+
+.contato ul li a .icon {
+    width: 20px; /* Tamanho reduzido para se adequar */
+    height: 20px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #1E3A8A; /* Azul escuro */
+    color: #fff; /* Letras brancas */
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+footer .citation {
+    font-size: 0.8rem;
+    color: #00BFFF; /* Azul claro */
+    margin-top: 5px;
+}
